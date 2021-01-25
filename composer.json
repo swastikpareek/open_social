@@ -165,6 +165,7 @@
         "drupal/role_delegation": "^1.1",
         "drupal/search_api": "1.15",
         "drupal/shariff": "1.5",
+        "drupal/socialbase": "1.0",
         "drupal/social_api": "1.1",
         "drupal/social_auth": "1.0",
         "drupal/swiftmailer" : "2.0-beta1",
