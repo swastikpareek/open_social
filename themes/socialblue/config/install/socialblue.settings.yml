@@ -10,6 +10,7 @@ box_shadow_spread: '2'
 box_shadow_blur: '0'
 box_shadow_x_offset: '0'
 box_shadow_y_offset: '1'
+timeline_disable: FALSE
 color_primary: '#29abe2'
 color_secondary: '#1f80aa'
 color_accent: '#ffc142'

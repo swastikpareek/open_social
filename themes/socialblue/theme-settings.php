@@ -211,12 +211,31 @@ function socialblue_form_system_theme_settings_alter(&$form, FormStateInterface 
         '#max' => 100,
       ];
 
+      // Timeline tab.
+      $form['os_timeline_settings'] = [
+        '#type' => 'details',
+        '#group' => 'open_social_settings',
+        '#title' => t('Timeline'),
+        '#weight' => 60,
+        '#collapsible' => TRUE,
+        '#collapsed' => TRUE,
+      ];
+
+      $form['os_timeline_settings']['timeline_disable'] = [
+        '#type' => 'checkbox',
+        '#title' => t('Disable timeline'),
+        '#default_value' => $config->get('timeline_disable'),
+        '#description' => t('Disable the timeline view on the dashboard.'),
+        '#min' => 0,
+        '#max' => 100,
+      ];
+
       // Styles tab.
       $form['os_style_settings'] = [
         '#type' => 'details',
         '#group' => 'open_social_settings',
         '#title' => t('Style'),
-        '#weight' => 60,
+        '#weight' => 70,
         '#collapsible' => TRUE,
         '#collapsed' => TRUE,
         '#access' => \Drupal::currentUser()->hasPermission('administer improved theme settings'),
