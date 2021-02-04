@@ -95,6 +95,21 @@ function improved_theme_settings_page_attachments(array &$page) {
           }';
       }
 
+      $timeline_view_disabled = improved_theme_settings_get_setting('timeline_disable', $system_theme_settings);
+      if($timeline_view_disabled) {
+        $style_to_add .= '
+          .card--stream:before,
+          .card--stream:after,
+          .stream:before {
+            content: none !important ;
+          }
+
+          .card--stream {
+            margin-left: 0 !important;
+          }
+        ';
+      }
+
       $card_radius = improved_theme_settings_get_setting('card_radius', $system_theme_settings);
 
       if ($card_radius >= 0) {
